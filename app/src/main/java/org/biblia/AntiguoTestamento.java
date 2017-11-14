@@ -34,7 +34,7 @@ public class AntiguoTestamento extends Fragment {
         edit  = (EditText)antiguoTestamento.findViewById(R.id.main_editText);
         text  = (TextView)antiguoTestamento.findViewById(R.id.main_textview);
 
-        text.setText("TEXT NEW");
+        text.setText("TEXT NEW....");
 
         boton.setOnClickListener( new View.OnClickListener() {
 

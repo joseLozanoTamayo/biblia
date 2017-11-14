@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/red"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Page 1"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="227dp"
+            android:layout_toStartOf="@+id/main_textview"
+            android:text="Page 1"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/main_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="EDIT"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/main_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="41dp"
+            android:text="EDIT" />
+
+        <TextView
+            android:id="@+id/main_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_button"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="41dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
 
 </FrameLayout>

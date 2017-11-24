@@ -30,7 +30,7 @@ public class AntiguoTestamento extends Fragment {
         View antiguoTestamento = inflater
                 .inflate(R.layout.antiguo_testamento, container, false);
 
-        boton = (Button)antiguoTestamento.findViewById(R.id.main_button);
+   /*   boton = (Button)antiguoTestamento.findViewById(R.id.main_button);
         edit  = (EditText)antiguoTestamento.findViewById(R.id.main_editText);
         text  = (TextView)antiguoTestamento.findViewById(R.id.main_textview);
 
@@ -45,7 +45,7 @@ public class AntiguoTestamento extends Fragment {
 
             }
 
-        });
+        });*/
 
         return antiguoTestamento;
     }

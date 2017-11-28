@@ -23,7 +23,8 @@ public class AntiguoTestamento extends Fragment {
     private TextView text;
 
     //Constructor default
-    public AntiguoTestamento(){};
+    public AntiguoTestamento() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

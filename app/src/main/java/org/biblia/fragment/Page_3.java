@@ -14,7 +14,8 @@ import org.biblia.R;
 public class Page_3  extends Fragment {
 
     //Constructor default
-    public Page_3(){};
+    public Page_3() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

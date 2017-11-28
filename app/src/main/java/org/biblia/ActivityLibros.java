@@ -26,11 +26,11 @@ public class ActivityLibros extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_libros);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        MyTabs = (TabLayout) findViewById(R.id.MyTabs);
-        MyPage = (ViewPager) findViewById(R.id.MyPage);
+        MyTabs = findViewById(R.id.MyTabs);
+        MyPage = findViewById(R.id.MyPage);
 
         MyTabs.setupWithViewPager(MyPage);
         SetUpViewPager(MyPage);
@@ -42,7 +42,7 @@ public class ActivityLibros extends AppCompatActivity {
         MyViewPageAdapter Adapter = new MyViewPageAdapter(getSupportFragmentManager());
 
         Adapter.AddFragmentPage(new AntiguoTestamento(), "Antiguo Testamento");
-        Adapter.AddFragmentPage(new NuevoTestamento(), "Nuevo Testamento");
+        Adapter.AddFragmentPage(NuevoTestamento.newInstance(), "Nuevo Testamento");
         //Adapter.AddFragmentPage(new Page_3(), "Page 3");
         //We Need Fragment class now
 

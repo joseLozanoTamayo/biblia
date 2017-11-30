@@ -19,7 +19,7 @@ public class Page_3  extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View PageTree = inflater.inflate(R.layout.page3, container, false);
+        View PageTree = inflater.inflate(R.layout.list_item_libro, container, false);
 
 
 

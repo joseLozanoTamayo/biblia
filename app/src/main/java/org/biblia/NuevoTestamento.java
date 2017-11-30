@@ -9,6 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import org.biblia.R;
+import org.biblia.org.bibllia.dto.LeadsRepository;
+import org.biblia.org.bibllia.dto.LibroListViewDTO;
+import org.biblia.org.bibllia.dto.LibrosAdapter;
 
 import java.util.ArrayList;
 
@@ -19,7 +22,7 @@ import java.util.ArrayList;
 public class NuevoTestamento extends Fragment {
 
     private ListView listNuevoTestamento;
-    private ArrayAdapter<String> listNuevoTestamentoAdapter;
+    private ArrayAdapter<LibroListViewDTO> listNuevoTestamentoAdapter;
     private String[] leadsNames = {
             "Mateo",
             "Marcos",
@@ -56,12 +59,14 @@ public class NuevoTestamento extends Fragment {
         View nuevoTestamento = inflater.inflate(R.layout.nuevo_testamento, container, false);
         listNuevoTestamento = nuevoTestamento.findViewById(R.id.listNuevoTestamento);
 
-        listNuevoTestamentoAdapter = new ArrayAdapter(
-                getActivity(),
-                android.R.layout.simple_list_item_1,
-                leadsNames
-        );
+        //listNuevoTestamentoAdapter = new ArrayAdapter(
+        //        getActivity(),
+        //        android.R.layout.simple_list_item_1,
+        //        leadsNames
+        //);
 
+        listNuevoTestamentoAdapter = new LibrosAdapter(getActivity(),
+                LeadsRepository.getInstance().getLeads());
         listNuevoTestamento.setAdapter(listNuevoTestamentoAdapter);
         return nuevoTestamento;
     }
